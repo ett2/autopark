@@ -1,2 +1,7 @@
-# autopark
-Repo for embedded portion of AutoPark senior design project
+# AutoPark
+Repo for the embedded portion of AutoPark senior design project
+
+Includes: 
+- Lots of testing modules as keepsakes
+- Fob
+- Sensors
