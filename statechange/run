@@ -34,8 +34,8 @@
 # Run Combination Lock in /var/lib/cloud9/ENGI301/python/combo_lock
 # 
 # --------------------------------------------------------------------------
-cd /var/lib/cloud9/ENGI301/project
+cd /var/lib/cloud9/autopark/statechange
 ./configure_pins.sh
 #PYTHONPATH=/var/lib/cloud9/ENGI301/python/ht16k33:/var/lib/cloud9/ENGI301/python/servo python3 combo_lock.py
-PYTHONPATG=/var/lib/cloud9/ENGI301/project python3 statechange.py
+PYTHONPATH=/var/lib/cloud9/autopark/statechange python3 statechange.py
 
