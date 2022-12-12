@@ -1,0 +1,8 @@
+Part Name,Designator,Manufacturer/MPN,Quanitity,Description
+Arduino Uno,Arduino 2009,Arduino,1,Microcontroller board
+6-pin Switch,SWITCH_DPDT,Various manufacturers,1,Found in FEP: no need to order
+5mm LED ,"LED1, LED2, LED3, LED4, LED5",Various manufacturers,5,Found in OEDK and FEP: no need to order
+RFM69HCW Radio Module,JP3,Adafruit,1,Radio transceiver/receiver module
+Tactile Push Buttons,"SW1, SW2, SW3, SW4",Various manufacturers,4,Found in OEDK: no need to order
+100-ohm resistor,"R1, R2, R3, R12, R13, R14, R15, R16",Various manufacturers,8,Found in FEP: no need to order
+Through-hole power source connector,G1,N/A,1,Can connect to various power sources depending on need
