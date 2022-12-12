@@ -1,9 +1,9 @@
 #!/bin/bash
 # --------------------------------------------------------------------------
-# Combination Lock - Configure Pins
+# State Driver - Configure Pins
 # --------------------------------------------------------------------------
 # License:   
-# Copyright 2020 Erik Welsh
+# Copyright 2022 Eunice Tan
 # 
 # Redistribution and use in source and binary forms, with or without 
 # modification, are permitted provided that the following conditions are met:
@@ -31,11 +31,10 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # --------------------------------------------------------------------------
 # 
-# Configure pins for Combination Lock:
-#   - I2C1
-#   - Button
-#   - LEDs (Red / Green)
-#   - Servo
+# Configure pins for State Driver:
+#   - Screen SPI
+#   - State inputs
+#   - State outputs
 # 
 # --------------------------------------------------------------------------
 
@@ -54,10 +53,3 @@ config-pin P8_09 gpio
 # Outputs
 config-pin P8_13 gpio
 config-pin P8_14 gpio
-
-# LEDs
-#config-pin P2_04 gpio
-#config-pin P2_06 gpio
-
-# Servo
-#config-pin P1_36 pwm

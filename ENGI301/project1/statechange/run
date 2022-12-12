@@ -1,9 +1,9 @@
 #!/bin/bash
 # --------------------------------------------------------------------------
-# Combination Lock - Run Script
+# State Driver - Run Script
 # --------------------------------------------------------------------------
 # License:   
-# Copyright 2020 Erik Welsh
+# Copyright 2022 Eunice Tan
 # 
 # Redistribution and use in source and binary forms, with or without 
 # modification, are permitted provided that the following conditions are met:
@@ -31,7 +31,9 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # --------------------------------------------------------------------------
 # 
-# Run Combination Lock in /var/lib/cloud9/ENGI301/python/combo_lock
+# Run in :
+# /var/lib/cloud9/autopark/statechange 
+# or cd /var/lib/cloud9/ENGI301/project1/statechange
 # 
 # --------------------------------------------------------------------------
 cd /var/lib/cloud9/autopark/statechange

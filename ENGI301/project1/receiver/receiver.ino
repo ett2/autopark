@@ -1,11 +1,49 @@
+/*
+--------------------------------------------------------------------------
+RF Receiver
+--------------------------------------------------------------------------
+License:   
+Copyright 2022 Eunice Tan
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this 
+list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation 
+and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors 
+may be used to endorse or promote products derived from this software without 
+specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+--------------------------------------------------------------------------
+This does a few things:
+- Gets state information from transceiver
+- Outputs this information as an encoder
+--------------------------------------------------------------------------
+Adapted from:
+https://learn.adafruit.com/adafruit-feather-32u4-radio-with-rfm69hcw-module/using-the-rfm69-radio
+https://github.com/sparkfun/SparkFun_RadioHead_Arduino_Library
+*/
 
 
 #include <SPI.h>
 #include <RH_RF69.h>
 
-/************ Radio Setup ***************/
 
-// Change to 434.0 or other frequency, must match RX's freq!
+// ------------------------------------------------------------------------
+// Global Variables
+// ------------------------------------------------------------------------
+
+// Declare frequency; should match that of transceiver
 #define RF69_FREQ 433.0
 
 #define RFM69_CS      4
@@ -18,9 +56,15 @@
 // Singleton instance of the radio driver
 RH_RF69 rf69(RFM69_CS, RFM69_INT);
 
-int16_t packetnum = 0;  // packet counter, we increment per xmission
+int16_t packetnum = 0;  // packet counter
 int state = 0;
 int output = 0;
+
+
+
+// ------------------------------------------------------------------------
+// Setup
+// ------------------------------------------------------------------------
 
 void setup() 
 {
@@ -38,7 +82,7 @@ void setup()
   digitalWrite(LED, LOW);
 
   // Test
-  Serial.println("RFM69 RX Test!");
+  Serial.println("Autopark Receiver Test");
   Serial.println();
 
   // radio reset
@@ -50,8 +94,6 @@ void setup()
     Serial.println("setFrequency failed");
   }
 
-  // If you are using a high power RF69 eg RFM69HW, you *must* set a Tx power with the
-  // ishighpowermodule flag set like this:
   rf69.setTxPower(20, true);  // range from 14-20 for power, 2nd arg must be true for 69HCW
 
   // The encryption key has to be the same as the one in the server
@@ -61,6 +103,11 @@ void setup()
 
   Serial.print("RFM69 radio @");  Serial.print((int)RF69_FREQ);  Serial.println(" MHz");
 }
+
+
+// ------------------------------------------------------------------------
+// Main Loop
+// ------------------------------------------------------------------------
 
 void loop() {
  if (rf69.available()) {
@@ -99,8 +146,12 @@ void loop() {
   }
 }
 
+
+// ------------------------------------------------------------------------
+// Manual Reset
+// ------------------------------------------------------------------------
+
 void radio_reset() {
-  // manual reset
   digitalWrite(RFM69_RST, HIGH);
   delay(10);
   digitalWrite(RFM69_RST, LOW);
@@ -112,6 +163,11 @@ void radio_reset() {
   }
   Serial.println("RFM69 radio init OK!");
 }
+
+
+// ------------------------------------------------------------------------
+// State Change
+// ------------------------------------------------------------------------
 
 void state_change(int s) { // state
   switch (s) {
@@ -146,6 +202,11 @@ void state_change(int s) { // state
   }
 
 }
+
+
+// ------------------------------------------------------------------------
+// Indicatior LED
+// ------------------------------------------------------------------------
 
 void Blink(byte PIN, byte DELAY_MS, byte loops) {
   for (byte i=0; i<loops; i++)  {
