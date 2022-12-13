@@ -169,9 +169,9 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="101.58" y2="0" width="0" layer="20"/>
-<wire x1="101.58" y1="0" x2="101.58" y2="100" width="0" layer="20"/>
-<wire x1="101.58" y1="100" x2="0" y2="100" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="101.6" y2="0" width="0" layer="20"/>
+<wire x1="101.6" y1="0" x2="101.6" y2="100" width="0" layer="20"/>
+<wire x1="101.6" y1="100" x2="0" y2="100" width="0" layer="20"/>
 <wire x1="0" y1="100" x2="0" y2="0" width="0" layer="20"/>
 <text x="73.66" y="86.36" size="1.778" layer="21">Project AutoPark
 Fob Design #1
@@ -184,8 +184,6 @@ Team YoungWoods</text>
 <dimension x1="0" y1="0" x2="101.58" y2="0" x3="50.79" y3="-15.24" textsize="1.778" layer="20"/>
 <dimension x1="6.604" y1="5.08" x2="3.556" y2="5.08" x3="5.08" y3="2.54" textsize="1.778" layer="1" dtype="diameter"/>
 <dimension x1="94.996" y1="5.08" x2="98.044" y2="5.08" x3="96.52" y3="7.62" textsize="1.778" layer="1" dtype="diameter"/>
-<dimension x1="39.37" y1="6.35" x2="39.37" y2="74.93" x3="-5.08" y3="40.64" textsize="1.778" layer="20"/>
-<dimension x1="11.43" y1="59.563" x2="11.43" y2="8.89" x3="0" y3="34.2265" textsize="1.778" layer="20"/>
 </plain>
 <libraries>
 <library name="battery" urn="urn:adsk.eagle:library:109">

@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2022-12-13T20:40:39Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.53,
+        "LayerNumber": 4,
+        "Name": {
+            "ProjectId": "fob"
+        },
+        "Owner": "Eunice Tan <ett2@rice.edu>",
+        "Size": {
+            "X": 101.6,
+            "Y": 100
+        }
+    }
+}
