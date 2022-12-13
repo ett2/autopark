@@ -7,5 +7,6 @@ Included in this directory:
 - Schematic file
 - Board file
 - Parts library
+- Bill of Materials
 - Gerber files
 - Pictures of the PCB design
