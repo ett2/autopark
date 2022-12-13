@@ -9,7 +9,7 @@
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
 <layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -176,6 +176,16 @@
 <text x="73.66" y="86.36" size="1.778" layer="21">Project AutoPark
 Fob Design #1
 Team YoungWoods</text>
+<circle x="88.9" y="78.74" radius="1.524" width="0.254" layer="20"/>
+<circle x="96.52" y="5.08" radius="1.524" width="0.254" layer="20"/>
+<circle x="5.08" y="5.08" radius="1.524" width="0.254" layer="20"/>
+<circle x="5.08" y="93.98" radius="1.524" width="0.254" layer="20"/>
+<dimension x1="101.58" y1="0" x2="101.58" y2="100" x3="115.57" y3="50" textsize="1.778" layer="20"/>
+<dimension x1="0" y1="0" x2="101.58" y2="0" x3="50.79" y3="-15.24" textsize="1.778" layer="20"/>
+<dimension x1="6.604" y1="5.08" x2="3.556" y2="5.08" x3="5.08" y3="2.54" textsize="1.778" layer="1" dtype="diameter"/>
+<dimension x1="94.996" y1="5.08" x2="98.044" y2="5.08" x3="96.52" y3="7.62" textsize="1.778" layer="1" dtype="diameter"/>
+<dimension x1="39.37" y1="6.35" x2="39.37" y2="74.93" x3="-5.08" y3="40.64" textsize="1.778" layer="20"/>
+<dimension x1="11.43" y1="59.563" x2="11.43" y2="8.89" x3="0" y3="34.2265" textsize="1.778" layer="20"/>
 </plain>
 <libraries>
 <library name="battery" urn="urn:adsk.eagle:library:109">
@@ -1155,9 +1165,9 @@ This DRC check is for 4-Layer Standard Capability boards. Use Layer 2 and 15 for
 <signal name="L2">
 <contactref element="R3" pad="2"/>
 <contactref element="IC1" pad="22"/>
-<wire x1="68.58" y1="68.58" x2="75.311" y2="68.58" width="0" layer="19" extent="1-1"/>
 <wire x1="25.4" y1="35.814" x2="35.814" y2="35.814" width="0.254" layer="1"/>
 <wire x1="35.814" y1="35.814" x2="68.58" y2="68.58" width="0.254" layer="1"/>
+<wire x1="68.58" y1="68.58" x2="75.311" y2="68.58" width="0.254" layer="1"/>
 </signal>
 <signal name="L5">
 <contactref element="IC1" pad="18"/>
@@ -1231,10 +1241,10 @@ This DRC check is for 4-Layer Standard Capability boards. Use Layer 2 and 15 for
 <contactref element="G1" pad="+"/>
 <contactref element="U$9" pad="2"/>
 <contactref element="U$9" pad="5"/>
-<wire x1="11.43" y1="59.563" x2="11.43" y2="76.2" width="0.254" layer="1"/>
-<wire x1="11.43" y1="76.2" x2="6.35" y2="81.28" width="0.254" layer="1"/>
-<wire x1="6.35" y1="81.28" x2="6.35" y2="84.2" width="0.254" layer="1"/>
-<wire x1="6.35" y1="84.2" x2="9.78" y2="87.63" width="0.254" layer="1"/>
+<wire x1="11.43" y1="59.563" x2="11.43" y2="76.2" width="0.8128" layer="1"/>
+<wire x1="11.43" y1="76.2" x2="6.35" y2="81.28" width="0.8128" layer="1"/>
+<wire x1="6.35" y1="81.28" x2="6.35" y2="84.2" width="0.8128" layer="1"/>
+<wire x1="6.35" y1="84.2" x2="9.78" y2="87.63" width="0.8128" layer="1"/>
 <wire x1="13.08" y1="87.63" x2="9.78" y2="87.63" width="0.254" layer="1"/>
 </signal>
 </signals>

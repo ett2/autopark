@@ -3972,6 +3972,8 @@ Library for Lab2</description>
 <text x="91.44" y="144.78" size="5.08" layer="91">Pushbuttons and LEDs</text>
 <text x="279.4" y="144.78" size="5.08" layer="91">Power Source</text>
 <text x="332.74" y="40.64" size="1.778" layer="91">Eunice Tan</text>
+<text x="0" y="248.92" size="6.4516" layer="91">AutoPark Fob Design #1
+Team Youngwoods</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="33.02" y="91.44" smashed="yes">
@@ -3993,12 +3995,12 @@ Library for Lab2</description>
 <attribute name="NAME" x="210.82" y="88.9" size="1.778" layer="96"/>
 <attribute name="VALUE" x="210.82" y="76.2" size="1.778" layer="96"/>
 </instance>
-<instance part="JP3" gate="A" x="149.86" y="220.98" smashed="yes">
-<attribute name="NAME" x="143.51" y="234.315" size="1.778" layer="95"/>
-<attribute name="VALUE" x="143.51" y="205.74" size="1.778" layer="96"/>
+<instance part="JP3" gate="A" x="223.52" y="210.82" smashed="yes">
+<attribute name="NAME" x="217.17" y="224.155" size="1.778" layer="95"/>
+<attribute name="VALUE" x="217.17" y="195.58" size="1.778" layer="96"/>
 </instance>
-<instance part="U$18" gate="G$1" x="124.46" y="226.06" smashed="yes">
-<attribute name="VALUE" x="122.936" y="223.52" size="1.27" layer="96"/>
+<instance part="U$18" gate="G$1" x="198.12" y="215.9" smashed="yes">
+<attribute name="VALUE" x="196.596" y="213.36" size="1.27" layer="96"/>
 </instance>
 <instance part="LED1" gate="G$1" x="119.38" y="119.38" smashed="yes">
 <attribute name="NAME" x="122.936" y="114.808" size="1.778" layer="95" rot="R90"/>
@@ -4068,8 +4070,8 @@ Library for Lab2</description>
 <instance part="U$27" gate="G$1" x="231.14" y="93.98" smashed="yes">
 <attribute name="VALUE" x="229.616" y="94.996" size="1.27" layer="96"/>
 </instance>
-<instance part="U$13" gate="G$1" x="124.46" y="236.22" smashed="yes">
-<attribute name="VALUE" x="122.936" y="237.236" size="1.27" layer="96"/>
+<instance part="U$13" gate="G$1" x="198.12" y="226.06" smashed="yes">
+<attribute name="VALUE" x="196.596" y="227.076" size="1.27" layer="96"/>
 </instance>
 <instance part="U$2" gate="G$1" x="33.02" y="127" smashed="yes">
 <attribute name="VALUE" x="31.496" y="128.016" size="1.27" layer="96"/>
@@ -4133,7 +4135,7 @@ Library for Lab2</description>
 <segment>
 <pinref part="U$18" gate="G$1" pin="GND"/>
 <pinref part="JP3" gate="A" pin="2"/>
-<wire x1="124.46" y1="228.6" x2="147.32" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="218.44" x2="220.98" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
@@ -4205,8 +4207,8 @@ Library for Lab2</description>
 <net name="3.3V" class="0">
 <segment>
 <pinref part="JP3" gate="A" pin="1"/>
-<wire x1="124.46" y1="233.68" x2="124.46" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="231.14" x2="147.32" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="223.52" x2="198.12" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="220.98" x2="220.98" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="U$13" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
@@ -4217,9 +4219,9 @@ Library for Lab2</description>
 </net>
 <net name="RST_5V" class="0">
 <segment>
-<label x="132.08" y="210.82" size="1.778" layer="95"/>
+<label x="205.74" y="200.66" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="9"/>
-<wire x1="109.22" y1="210.82" x2="147.32" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="200.66" x2="220.98" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="6"/>
@@ -4229,8 +4231,8 @@ Library for Lab2</description>
 </net>
 <net name="MOSI_5V" class="0">
 <segment>
-<wire x1="147.32" y1="215.9" x2="132.08" y2="215.9" width="0.1524" layer="91"/>
-<label x="132.08" y="215.9" size="1.778" layer="95"/>
+<wire x1="220.98" y1="205.74" x2="205.74" y2="205.74" width="0.1524" layer="91"/>
+<label x="205.74" y="205.74" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="7"/>
 </segment>
 <segment>
@@ -4241,8 +4243,8 @@ Library for Lab2</description>
 </net>
 <net name="SCK_5V" class="0">
 <segment>
-<wire x1="147.32" y1="220.98" x2="132.08" y2="220.98" width="0.1524" layer="91"/>
-<label x="132.08" y="220.98" size="1.778" layer="95"/>
+<wire x1="220.98" y1="210.82" x2="205.74" y2="210.82" width="0.1524" layer="91"/>
+<label x="205.74" y="210.82" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="5"/>
 </segment>
 <segment>
@@ -4253,9 +4255,9 @@ Library for Lab2</description>
 </net>
 <net name="CS_5V" class="0">
 <segment>
-<label x="132.08" y="213.36" size="1.778" layer="95"/>
+<label x="205.74" y="203.2" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="8"/>
-<wire x1="109.22" y1="213.36" x2="147.32" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="203.2" x2="220.98" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="4"/>
@@ -4317,8 +4319,8 @@ Library for Lab2</description>
 </net>
 <net name="MISO_3V" class="0">
 <segment>
-<wire x1="147.32" y1="218.44" x2="132.08" y2="218.44" width="0.1524" layer="91"/>
-<label x="132.08" y="218.44" size="1.778" layer="95"/>
+<wire x1="220.98" y1="208.28" x2="205.74" y2="208.28" width="0.1524" layer="91"/>
+<label x="205.74" y="208.28" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="6"/>
 </segment>
 <segment>
@@ -4329,15 +4331,15 @@ Library for Lab2</description>
 </net>
 <net name="EN" class="0">
 <segment>
-<wire x1="147.32" y1="226.06" x2="132.08" y2="226.06" width="0.1524" layer="91"/>
-<label x="132.08" y="226.06" size="1.778" layer="95"/>
+<wire x1="220.98" y1="215.9" x2="205.74" y2="215.9" width="0.1524" layer="91"/>
+<label x="205.74" y="215.9" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="DIO0" class="0">
 <segment>
-<wire x1="147.32" y1="223.52" x2="132.08" y2="223.52" width="0.1524" layer="91"/>
-<label x="132.08" y="223.52" size="1.778" layer="95"/>
+<wire x1="220.98" y1="213.36" x2="205.74" y2="213.36" width="0.1524" layer="91"/>
+<label x="205.74" y="213.36" size="1.778" layer="95"/>
 <pinref part="JP3" gate="A" pin="4"/>
 </segment>
 <segment>
@@ -4543,6 +4545,10 @@ Library for Lab2</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
